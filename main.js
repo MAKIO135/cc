@@ -6,8 +6,7 @@ document.querySelector('.container').innerHTML = hashes.map(hash => {
     return `<div class="box" title="${hash}"><img src="images/${hash}.png" loading="lazy"></div>`
 }).sort((a, b) => 1 - Math.random()*2).join('')
 
-
-document.querySelectorAll('.box').forEach(b => console.log(b.title))
+document.querySelectorAll('.box').forEach(b => console.log(`https://24442d34-50d0-40e0-9906-3829c0e8760d-00-10er39lwhwzkv.janeway.replit.dev/#${b.title}`))
 
 mediumZoom('img', {
     margin: 10,
