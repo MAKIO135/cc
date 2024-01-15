@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', e => document.querySelectorAll('im
 }))
 
 document.querySelector('.container').innerHTML = hashes.map(hash => {
-    return `<div class="box" title="${hash}"><img src="images/${hash}.png" loading="lazy"></div>`
+    return `<div class="box" ><img src="images/${hash}.png" title="${hash}" loading="lazy"></div>`
 }).sort((a, b) => 1 - Math.random()*2).join('')
 
-document.querySelectorAll('.box').forEach(b => console.log(`https://24442d34-50d0-40e0-9906-3829c0e8760d-00-10er39lwhwzkv.janeway.replit.dev/#${b.title}`))
+document.querySelectorAll('img').forEach(img => console.log(`https://24442d34-50d0-40e0-9906-3829c0e8760d-00-10er39lwhwzkv.janeway.replit.dev/#${img.title}`))
 
 mediumZoom('img', {
     margin: 10,
