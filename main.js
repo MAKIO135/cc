@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', e => document.querySelectorAll('im
 }))
 
 document.querySelector('.container').innerHTML = hashes.map((hash,i) => {
-    let title = `#${hash}`
+    let title = `${hash}`
     
     return {
         html: `<div class="box"><img src="images/${hash}.png" title="${title}" loading="lazy"></div>`
