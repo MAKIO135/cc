@@ -3,8 +3,11 @@ document.addEventListener('DOMContentLoaded', e => document.querySelectorAll('im
 }))
 
 document.querySelector('.container').innerHTML = hashes.map(hash => {
-    return `<div class="box"><img src="images/${hash}.png" title="${hash}" loading="lazy"></div>`
+    return `<div class="box" title="${hash}"><img src="images/${hash}.png" loading="lazy"></div>`
 }).sort((a, b) => 1 - Math.random()*2).join('')
+
+
+document.querySelectorAll('.box').forEach(b => console.log(b.title))
 
 mediumZoom('img', {
     margin: 10,
